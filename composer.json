@@ -1,0 +1,16 @@
+{
+    "name": "korzhavin/brain-games",
+    "description": "Brain games",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Valery Korzhavin",
+            "email": "white.and.bushy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "bin": [
+        "bin/brain-games"
+    ],
+    "require": {}
+}
