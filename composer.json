@@ -1,6 +1,7 @@
 {
     "name": "korzhavin/brain-games",
     "description": "Brain games",
+    "keywords": ["console", "games"],
     "type": "project",
     "authors": [
         {
