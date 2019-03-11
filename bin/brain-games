@@ -2,6 +2,7 @@
 
 <?php
 
+use function BrainGames\Cli\run;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -12,7 +13,4 @@ if (file_exists($autoloadPath1)) {
 }
 
 
-
-BrainGames\Cli\run();
-
-#print_r("Welcome to the Brain Games!\n");
+run();
