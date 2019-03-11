@@ -8,7 +8,6 @@
             "email": "white.and.bushy@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "bin": [
         "bin/brain-games"
     ],
