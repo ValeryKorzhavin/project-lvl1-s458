@@ -2,7 +2,7 @@
 
 namespace BrainGames\games\Calc;
 
-use function BrainGames\Cli\run;
+use function BrainGames\Game\run;
 
 const TASK = "What is the result of the expression?";
 
@@ -35,8 +35,8 @@ function start()
         $operation = getOperation()[rand(0, 2)];
 
         $question = "$a {$operation['op']} $b";
-        $answer = (string) $operation['func']($a, $b);
+        $rightAnswer = (string) $operation['func']($a, $b);
 
-        return [$question, $answer];
+        return [$question, $rightAnswer];
     });
 }

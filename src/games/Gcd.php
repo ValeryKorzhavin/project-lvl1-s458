@@ -2,7 +2,7 @@
 
 namespace BrainGames\games\Gcd;
 
-use function BrainGames\Cli\run;
+use function BrainGames\Game\run;
 
 const TASK = "Find the greatest common divisor of given numbers.";
 
@@ -18,8 +18,8 @@ function start()
         $secondNum = rand(0, 100);
         
         $question = "$firstNum $secondNum";
-        $answer = (string) getGcd($firstNum, $secondNum);
+        $rightAnswer = (string) getGcd($firstNum, $secondNum);
 
-        return [$question, $answer];
+        return [$question, $rightAnswer];
     });
 }
