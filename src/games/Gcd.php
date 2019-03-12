@@ -5,7 +5,6 @@ namespace BrainGames\Gcd;
 use function BrainGames\Cli\run;
 
 const CONDITION = "Find the greatest common divisor of given numbers.";
-const RAND_MIN = 1;
 const RAND_MAX = 100;
 const STEP_MIN = 1;
 const STEP_MAX = 10;
@@ -13,8 +12,9 @@ const STEP_MAX = 10;
 function getNumbers()
 {
     $arrayStep = rand(STEP_MIN, STEP_MAX);
-    $randArray = range(RAND_MIN, RAND_MAX, $arrayStep);
+    $randMin = $arrayStep;
 
+    $randArray = range($randMin, RAND_MAX, $arrayStep);
     [$firstKey, $secondKey] = array_rand($randArray, 2);
 
     $firstNum = $randArray[$firstKey];
