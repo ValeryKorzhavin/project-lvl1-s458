@@ -6,11 +6,24 @@ use function BrainGames\Cli\run;
 
 const TASK = "What is the result of the expression?";
 
-function getOperation() {
+function getOperation()
+{
     return [
-        ['op' => '*', 'func' => function ($a, $b) { return $a * $b; }],
-        ['op' => '+', 'func' => function ($a, $b) { return $a + $b; }],
-        ['op' => '-', 'func' => function ($a, $b) { return $a - $b; }]
+        [
+            'op' => '*', 'func' => function ($a, $b) {
+                return $a * $b;
+            }
+        ],
+        [
+            'op' => '+', 'func' => function ($a, $b) {
+                return $a + $b;
+            }
+        ],
+        [
+            'op' => '-', 'func' => function ($a, $b) {
+                return $a - $b;
+            }
+        ]
     ];
 }
 
