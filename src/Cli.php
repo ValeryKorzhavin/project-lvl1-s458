@@ -5,28 +5,28 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-const ATTEMPTS_COUNT = 3;
+const ROUNDS_COUNT = 3;
 
-function run(string $gameRules = '', callable $generator = null): void
+function run(string $task = '', callable $generator = null): void
 {
     line('Welcome to the Brain Games!');
-    !$gameRules ?: line($gameRules);
+    !$task ?: line($task);
     line();
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     
-    if (!$gameRules || !$generator) {
+    if (!$task || !$generator) {
         return;
     }
     line();
 
-    for ($i = 0; $i < ATTEMPTS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         [$question, $rightAnswer] = $generator();
 
         line('Question: %s', $question);
         $answer = prompt('Your answer');
 
-        if (!checkAnswer($answer, $rightAnswer)) {
+        if ($answer !== $rightAnswer) {
             line('"%s" is wrong answer ;(. Correct answer was "%s"', $answer, $rightAnswer);
             line('Let\'s try again, %s!', $name);
             return;
@@ -34,9 +34,4 @@ function run(string $gameRules = '', callable $generator = null): void
         line('Correct!');
     }
     line('Congratulations, %s!', $name);
-}
-
-function checkAnswer(string $answer, string $rightAnswer)
-{
-    return $answer === $rightAnswer;
 }

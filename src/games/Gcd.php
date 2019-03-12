@@ -4,17 +4,14 @@ namespace BrainGames\Gcd;
 
 use function BrainGames\Cli\run;
 
-const CONDITION = "Find the greatest common divisor of given numbers.";
-const RAND_MAX = 100;
-const STEP_MIN = 1;
-const STEP_MAX = 10;
+const TASK = "Find the greatest common divisor of given numbers.";
 
 function getNumbers()
 {
-    $arrayStep = rand(STEP_MIN, STEP_MAX);
+    $arrayStep = rand(1, 10);
     $randMin = $arrayStep;
 
-    $randArray = range($randMin, RAND_MAX, $arrayStep);
+    $randArray = range($randMin, 100, $arrayStep);
     [$firstKey, $secondKey] = array_rand($randArray, 2);
 
     $firstNum = $randArray[$firstKey];
@@ -28,17 +25,12 @@ function gcd($a, $b): int
     return $a % $b === 0 ? $b : gcd($b, $a % $b);
 }
 
-function getAnswer(int $firstNum, int $secondNum): int
-{
-    return gcd($firstNum, $secondNum);
-}
-
 function start()
 {
-    run(CONDITION, function () {
+    run(TASK, function () {
         [$firstNum, $secondNum] = getNumbers();
         $question = "$firstNum $secondNum";
-        $answer = getAnswer($firstNum, $secondNum);
+        $answer = (string) gcd($firstNum, $secondNum);
 
         return [$question, $answer];
     });

@@ -4,41 +4,24 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Cli\run;
 
-const RAND_MIN = 0;
-const RAND_MAX = 100;
-const CONDITION = "What is the result of the expression?";
+const TASK = "What is the result of the expression?";
 const OPERATION = ['*', '+', '-'];
-
-function getRandomInt()
-{
-    return rand(RAND_MIN, RAND_MAX);
-}
-
-function getRandomOp()
-{
-    return OPERATION[array_rand(OPERATION)];
-}
 
 function getQuestion()
 {
-    $firstOperand = getRandomInt();
-    $secondOperand = getRandomInt();
-    $operation = getRandomOp();
+    $firstOperand = rand(0, 100);
+    $secondOperand = rand(0, 100);
+    $operation = OPERATION[array_rand(OPERATION)];
 
     return "$firstOperand $operation $secondOperand";
 }
 
-function getAnswer(string $expression): int
-{
-    return eval("return $expression;");
-}
-
 function start()
 {
-    run(CONDITION, function () {
+    run(TASK, function () {
         $question = getQuestion();
-        $answer = getAnswer($question);
+        $answer = (string) eval("return $question;");
 
-        return [(string) $question, $answer];
+        return [$question, $answer];
     });
 }
