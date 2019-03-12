@@ -14,8 +14,8 @@ function getGcd($a, $b): int
 function start()
 {
     run(TASK, function () {
-        $firstNum = rand(0, 100);
-        $secondNum = rand(0, 100);
+        $firstNum = rand(1, 100);
+        $secondNum = rand(1, 100);
         
         $question = "$firstNum $secondNum";
         $rightAnswer = (string) getGcd($firstNum, $secondNum);
