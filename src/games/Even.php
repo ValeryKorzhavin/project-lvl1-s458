@@ -16,7 +16,7 @@ function start()
     run(TASK, function () {
         $number = rand(0, 100);
         $answer = isEven($number) ? 'yes' : 'no';
-    	$question = (string) $number;
+        $question = (string) $number;
 
         return [$question, $answer];
     });
