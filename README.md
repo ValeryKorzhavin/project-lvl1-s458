@@ -24,3 +24,7 @@ brain-even
 ### Calc game
 
 [![asciicast](https://asciinema.org/a/zXs2rMyUxaiUShYQUSkIeujjW.svg)](https://asciinema.org/a/zXs2rMyUxaiUShYQUSkIeujjW)
+
+### Gcd game
+
+[![asciicast](https://asciinema.org/a/c5hbSyjGT186FBRGMyzWgarar.svg)](https://asciinema.org/a/c5hbSyjGT186FBRGMyzWgarar)
