@@ -5,7 +5,7 @@ namespace BrainGames\Gcd;
 use function BrainGames\Cli\run;
 
 const CONDITION = "Find the greatest common divisor of given numbers.";
-const RAND_MIN = 0;
+const RAND_MIN = 1;
 const RAND_MAX = 100;
 const STEP_MIN = 1;
 const STEP_MAX = 10;
