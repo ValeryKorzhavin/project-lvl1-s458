@@ -14,4 +14,4 @@ composer global require krozhavin/brain-games
 
 ### Even game
 
-[![asciicast](https://asciinema.org/a/H20K1sFL1DwinDkznYWVk9Uwg.svg)](https://asciinema.org/a/H20K1sFL1DwinDkznYWVk9Uwg)
+[![asciicast](https://asciinema.org/a/T0Y8dujv4KLH4V8l3Y18NIJbJ.svg)](https://asciinema.org/a/T0Y8dujv4KLH4V8l3Y18NIJbJ)
