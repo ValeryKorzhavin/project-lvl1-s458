@@ -32,7 +32,7 @@ function start()
         $answer = ask((string) $num);
 
         if (!checkAnswer($num, $answer)) {
-            result($name, $answer, getRight($num));
+            result($name, getRight($num), $answer);
             return;
         }
         correct();
