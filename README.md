@@ -9,9 +9,18 @@ Type for global installation with composer
 ```
 composer global require krozhavin/brain-games
 ```
+### Run
 
+Enter the name of the game in a command line
+```
+brain-even
+```
 [![asciicast](https://asciinema.org/a/1pJCTb9ChuAEsu4ceSQK50BJi.svg)](https://asciinema.org/a/1pJCTb9ChuAEsu4ceSQK50BJi)
 
 ### Even game
 
 [![asciicast](https://asciinema.org/a/T0Y8dujv4KLH4V8l3Y18NIJbJ.svg)](https://asciinema.org/a/T0Y8dujv4KLH4V8l3Y18NIJbJ)
+
+### Calc game
+
+[![asciicast](https://asciinema.org/a/zXs2rMyUxaiUShYQUSkIeujjW.svg)](https://asciinema.org/a/zXs2rMyUxaiUShYQUSkIeujjW)
