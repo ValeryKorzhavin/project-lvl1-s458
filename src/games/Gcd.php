@@ -13,7 +13,6 @@ const STEP_MAX = 10;
 function getNumbers()
 {
     $arrayStep = rand(STEP_MIN, STEP_MAX);
-    print_r("Step: $arrayStep");
     $randArray = range(RAND_MIN, RAND_MAX, $arrayStep);
 
     [$firstKey, $secondKey] = array_rand($randArray, 2);
