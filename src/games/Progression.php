@@ -10,9 +10,9 @@ function getProgression(): array
 {
     $step = rand(1, 10);
     $beg = rand(1, 10);
-    $length = 9;
+    $length = 10;
    
-    $progression = range($beg, $beg + $step * $length, $step);
+    $progression = range($beg, $step * $length, $step);
     $key = array_rand($progression);
 
     $rightAnswer = (string) $progression[$key];
