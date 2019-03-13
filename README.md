@@ -28,3 +28,7 @@ brain-even
 ### Gcd game
 
 [![asciicast](https://asciinema.org/a/c5hbSyjGT186FBRGMyzWgarar.svg)](https://asciinema.org/a/c5hbSyjGT186FBRGMyzWgarar)
+
+### Progression game
+
+[![asciicast](https://asciinema.org/a/Y3I1owp98UGNx7WbJnpf6ca3N.svg)](https://asciinema.org/a/Y3I1owp98UGNx7WbJnpf6ca3N)
