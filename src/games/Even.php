@@ -13,7 +13,7 @@ function isEven(int $number): bool
 
 function start()
 {
-    $generator = function () {
+    $generateGameData = function () {
         $number = rand(0, 100);
         $rightAnswer = isEven($number) ? 'yes' : 'no';
         $question = (string) $number;
@@ -21,5 +21,5 @@ function start()
         return [$question, $rightAnswer];
     };
 
-    run(TASK, $generator);
+    run(TASK, $generateGameData);
 }

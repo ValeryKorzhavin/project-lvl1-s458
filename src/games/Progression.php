@@ -9,8 +9,7 @@ const PROGRESSION_LENGTH = 10;
 
 function start()
 {
-
-    $generator = function () {
+    $generateGameData = function () {
         $step = rand(1, 10);
         $begin = rand(1, 10);
         $end = $begin + $step * (PROGRESSION_LENGTH - 1);
@@ -25,5 +24,5 @@ function start()
         return [$question, $rightAnswer];
     };
 
-    run(TASK, $generator);
+    run(TASK, $generateGameData);
 }

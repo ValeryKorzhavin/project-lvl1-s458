@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function run(string $task, callable $generator): void
+function run(string $task, callable $generateGameData): void
 {
     line('Welcome to the Brain Games!');
     line($task);
