@@ -12,22 +12,22 @@ function run(string $task, callable $generateGameData): void
     line('Welcome to the Brain Games!');
     line($task);
     line();
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $userName = prompt('May I have your name?');
+    line("Hello, %s!", $userName);
     line();
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        [$question, $rightAnswer] = $generator();
+        [$question, $rightAnswer] = $generateGameData();
 
         line('Question: %s', $question);
-        $answer = prompt('Your answer');
+        $userAnswer = prompt('Your answer');
 
-        if ($answer !== $rightAnswer) {
-            line('"%s" is wrong answer ;(. Correct answer was "%s"', $answer, $rightAnswer);
-            line('Let\'s try again, %s!', $name);
+        if ($userAnswer !== $rightAnswer) {
+            line('"%s" is wrong answer ;(. Correct answer was "%s"', $userAnswer, $rightAnswer);
+            line('Let\'s try again, %s!', $userName);
             return;
         }
         line('Correct!');
     }
-    line('Congratulations, %s!', $name);
+    line('Congratulations, %s!', $userName);
 }
