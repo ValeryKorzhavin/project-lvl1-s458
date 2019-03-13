@@ -21,11 +21,13 @@ function isPrime(int $num): bool
 
 function start()
 {
-    run(TASK, function () {
+    $generator = function () {
         $number = rand(0, 100);
         $rightAnswer = isPrime($number) ? 'yes' : 'no';
         $question = (string) $number;
 
         return [$question, $rightAnswer];
-    });
+    };
+
+    run(TASK, $generator);
 }

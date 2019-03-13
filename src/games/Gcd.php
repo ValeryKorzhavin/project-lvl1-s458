@@ -13,7 +13,7 @@ function getGcd($a, $b): int
 
 function start()
 {
-    run(TASK, function () {
+	$generator = function () {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
         
@@ -21,5 +21,7 @@ function start()
         $rightAnswer = (string) getGcd($firstNum, $secondNum);
 
         return [$question, $rightAnswer];
-    });
+    };
+
+    run(TASK, $generator);
 }

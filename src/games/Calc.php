@@ -8,7 +8,7 @@ const TASK = "What is the result of the expression?";
 
 function start()
 {
-    run(TASK, function () {
+    $generator = function () {
         $a = rand(0, 100);
         $b = rand(0, 100);
         $operationsCount = 3;
@@ -36,5 +36,7 @@ function start()
         $rightAnswer = (string) $operation['operation']($a, $b);
 
         return [$question, $rightAnswer];
-    });
+    };
+    
+    run(TASK, $generator);
 }

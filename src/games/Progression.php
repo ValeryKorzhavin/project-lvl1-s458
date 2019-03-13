@@ -9,12 +9,13 @@ const PROGRESSION_LENGTH = 10;
 
 function start()
 {
-    run(TASK, function () {
-        $step = rand(1, 10);
-        $beg = rand(1, 10);
-        $end = $beg + $step * (PROGRESSION_LENGTH - 1);
 
-        $progression = range($beg, $end, $step);
+    $generator = function () {
+        $step = rand(1, 10);
+        $begin = rand(1, 10);
+        $end = $begin + $step * (PROGRESSION_LENGTH - 1);
+
+        $progression = range($begin, $end, $step);
         $hiddenElementPosition = array_rand($progression);
 
         $rightAnswer = (string) $progression[$hiddenElementPosition];
@@ -22,5 +23,7 @@ function start()
         $question = implode(' ', $progression);
 
         return [$question, $rightAnswer];
-    });
+    };
+
+    run(TASK, $generator);
 }
