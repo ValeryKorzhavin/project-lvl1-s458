@@ -14,11 +14,11 @@ function getGcd($a, $b): int
 function start()
 {
     $generator = function () {
-        $firstNum = rand(1, 100);
-        $secondNum = rand(1, 100);
+        $firstNumber = rand(1, 100);
+        $secondNumber = rand(1, 100);
         
-        $question = "$firstNum $secondNum";
-        $rightAnswer = (string) getGcd($firstNum, $secondNum);
+        $question = "$firstNumber $secondNumber";
+        $rightAnswer = (string) getGcd($firstNumber, $secondNumber);
 
         return [$question, $rightAnswer];
     };
