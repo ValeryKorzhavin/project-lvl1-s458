@@ -13,7 +13,7 @@ function getGcd($a, $b): int
 
 function start()
 {
-	$generator = function () {
+    $generator = function () {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
         
