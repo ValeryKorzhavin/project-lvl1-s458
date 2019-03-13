@@ -10,11 +10,11 @@ const PROGRESSION_LENGTH = 10;
 function start()
 {
     $generateGameData = function () {
-        $step = rand(1, 10);
-        $begin = rand(1, 10);
-        $end = $begin + $step * (PROGRESSION_LENGTH - 1);
+        $progressionStep = rand(1, 10);
+        $firstElement = rand(1, 10);
+        $lastElement = $firstElement + $progressionStep * (PROGRESSION_LENGTH - 1);
 
-        $progression = range($begin, $end, $step);
+        $progression = range($firstElement, $lastElement, $progressionStep);
         $hiddenElementPosition = array_rand($progression);
 
         $rightAnswer = (string) $progression[$hiddenElementPosition];
