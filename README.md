@@ -32,3 +32,7 @@ brain-even
 ### Progression game
 
 [![asciicast](https://asciinema.org/a/Y3I1owp98UGNx7WbJnpf6ca3N.svg)](https://asciinema.org/a/Y3I1owp98UGNx7WbJnpf6ca3N)
+
+### Prime game
+
+[![asciicast](https://asciinema.org/a/Z6VS7SUb3XVexv4HcCEmLCsnk.svg)](https://asciinema.org/a/Z6VS7SUb3XVexv4HcCEmLCsnk)
