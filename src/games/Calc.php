@@ -11,7 +11,7 @@ function start()
     run(TASK, function () {
         $a = rand(0, 100);
         $b = rand(0, 100);
-        $operations = [
+        $operation = [
             [
                 'sign' => '*', 'operation' => function ($a, $b) {
                     return $a * $b;
@@ -27,8 +27,7 @@ function start()
                     return $a - $b;
                 }
             ]
-        ];
-        $operation = $operations[rand(0, 2)];
+        ][rand(0, 2)];
 
         $question = "$a {$operation['sign']} $b";
         $rightAnswer = (string) $operation['operation']($a, $b);
