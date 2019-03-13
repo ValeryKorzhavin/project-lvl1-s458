@@ -18,7 +18,7 @@ function start()
         $hiddenElementPosition = array_rand($progression);
 
         $rightAnswer = (string) $progression[$hiddenElementPosition];
-        $progression[$key] = '..';
+        $progression[$hiddenElementPosition] = '..';
         $question = implode(' ', $progression);
 
         return [$question, $rightAnswer];
