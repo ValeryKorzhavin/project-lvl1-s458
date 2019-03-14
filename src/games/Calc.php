@@ -8,12 +8,7 @@ const TASK = "What is the result of the expression?";
 
 function start()
 {
-    $generateGameData = function () {
-        $a = rand(0, 100);
-        $b = rand(0, 100);
-        $operationsCount = 3;
-
-        $operations = [
+    $operations = [
             [
                 'sign' => '*', 'operation' => function ($a, $b) {
                     return $a * $b;
@@ -31,12 +26,16 @@ function start()
             ]
         ];
 
+    $generateGameData = function () use ($operations) {
+        $a = rand(0, 100);
+        $b = rand(0, 100);
+        $operationsCount = 3;
         $operation = $operations[rand(0, ($operationsCount - 1))];
         $question = "$a {$operation['sign']} $b";
         $rightAnswer = (string) $operation['operation']($a, $b);
 
         return [$question, $rightAnswer];
     };
-    
+
     run(TASK, $generateGameData);
 }
