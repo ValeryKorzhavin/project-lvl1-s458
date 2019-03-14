@@ -5,6 +5,7 @@ namespace BrainGames\games\Calc;
 use function BrainGames\Main\run;
 
 const TASK = "What is the result of the expression?";
+const OPERATIONS_COUNT = 3;
 
 function start()
 {
@@ -29,8 +30,8 @@ function start()
     $generateGameData = function () use ($operations) {
         $a = rand(0, 100);
         $b = rand(0, 100);
-        $operationsCount = 3;
-        $operation = $operations[rand(0, ($operationsCount - 1))];
+        
+        $operation = $operations[rand(0, (OPERATIONS_COUNT - 1))];
         $question = "$a {$operation['sign']} $b";
         $rightAnswer = (string) $operation['operation']($a, $b);
 
