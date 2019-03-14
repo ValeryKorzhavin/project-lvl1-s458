@@ -10,22 +10,22 @@ const OPERATIONS_COUNT = 3;
 function start()
 {
     $operations = [
-            [
-                'sign' => '*', 'operation' => function ($a, $b) {
-                    return $a * $b;
-                }
-            ],
-            [
-                'sign' => '+', 'operation' => function ($a, $b) {
-                    return $a + $b;
-                }
-            ],
-            [
-                'sign' => '-', 'operation' => function ($a, $b) {
-                    return $a - $b;
-                }
-            ]
-        ];
+        [
+            'sign' => '*', 'operation' => function ($a, $b) {
+                return $a * $b;
+            }
+        ],
+        [
+            'sign' => '+', 'operation' => function ($a, $b) {
+                return $a + $b;
+            }
+        ],
+        [
+            'sign' => '-', 'operation' => function ($a, $b) {
+                return $a - $b;
+            }
+        ]
+    ];
 
     $generateGameData = function () use ($operations) {
         $a = rand(0, 100);
