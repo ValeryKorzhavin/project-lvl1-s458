@@ -30,7 +30,6 @@ function start()
     $generateGameData = function () use ($operations) {
         $a = rand(0, 100);
         $b = rand(0, 100);
-        
         $operation = $operations[rand(0, (OPERATIONS_COUNT - 1))];
         $question = "$a {$operation['sign']} $b";
         $rightAnswer = (string) $operation['operation']($a, $b);
